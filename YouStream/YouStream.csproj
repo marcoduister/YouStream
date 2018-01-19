@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>Properties\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
