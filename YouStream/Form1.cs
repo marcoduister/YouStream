@@ -22,30 +22,47 @@ namespace YouStream
 
         }
 
+        #region menu
+
         private void Button_MyMusic_Click(object sender, EventArgs e)
         {
-
+            UserControl_my_Music change = new UserControl_my_Music();
+            Panel(change);
         }
 
         private void Button_RecentlyPlayed_Click(object sender, EventArgs e)
         {
-
+            UserControl_Recently_played change = new UserControl_Recently_played();
+            Panel(change);
         }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        private void Button_download_Click(object sender, EventArgs e)
         {
-
+            UserControl_Download change = new UserControl_Download();
+            Panel(change);
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        private void Button_favorites_Click(object sender, EventArgs e)
         {
-
+            UserControl_Favorites change = new UserControl_Favorites();
+            Panel(change);
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void Button_playlists_Click(object sender, EventArgs e)
         {
-
+            UserControl_Playlists change = new UserControl_Playlists();
+            Panel(change);
         }
+
+        public void Panel(UserControl change)
+        {
+            main_panel.Controls.Clear();
+            main_panel.Controls.Add(change);
+            main_panel.Show();
+        }
+
+        #endregion
+
+
 
         #region upperpanel
 
@@ -71,17 +88,13 @@ namespace YouStream
             Application.Exit();
         }
 
-        private void Button_maximize_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
         private void Button_minimize_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
         #endregion
+
 
     }
 }
