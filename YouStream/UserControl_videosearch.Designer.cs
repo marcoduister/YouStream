@@ -42,20 +42,23 @@
             this.Thumbnail.Location = new System.Drawing.Point(3, 3);
             this.Thumbnail.Name = "Thumbnail";
             this.Thumbnail.Size = new System.Drawing.Size(246, 138);
-            this.Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Thumbnail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Thumbnail.TabIndex = 0;
             this.Thumbnail.TabStop = false;
             // 
             // label_Title
             // 
+            this.label_Title.AutoEllipsis = true;
             this.label_Title.AutoSize = true;
+            this.label_Title.CausesValidation = false;
             this.label_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_Title.ForeColor = System.Drawing.Color.Gray;
             this.label_Title.Location = new System.Drawing.Point(255, 29);
             this.label_Title.Name = "label_Title";
-            this.label_Title.Size = new System.Drawing.Size(240, 37);
+            this.label_Title.Size = new System.Drawing.Size(237, 44);
             this.label_Title.TabIndex = 1;
             this.label_Title.Text = "NF - NO NAME";
+            this.label_Title.UseCompatibleTextRendering = true;
             // 
             // label_Author
             // 
@@ -101,6 +104,7 @@
             this.button_download.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button_download.Textcolor = System.Drawing.Color.White;
             this.button_download.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_download.Click += new System.EventHandler(this.button_download_Click);
             // 
             // UserControl_videosearch
             // 
@@ -112,7 +116,7 @@
             this.Controls.Add(this.label_Title);
             this.Controls.Add(this.Thumbnail);
             this.Name = "UserControl_videosearch";
-            this.Size = new System.Drawing.Size(689, 144);
+            this.Size = new System.Drawing.Size(670, 144);
             ((System.ComponentModel.ISupportInitialize)(this.Thumbnail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

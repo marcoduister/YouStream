@@ -20,15 +20,17 @@ namespace YouStream
             InitializeComponent();
         }
 
-        private void Button_Search_Click(object sender, EventArgs e)
+        private void button_search_Click(object sender, EventArgs e)
         {
             VideoSearch items = new VideoSearch();
-            List<download> list = new List<download>();
+            List<Download> list = new List<Download>();
+            int aantal = list.Count;
+            int height = 0;
             foreach (var item in items.SearchQuery(Textbox_search.text, 1))
             {
-                UserControl_videosearch lol = new UserControl_videosearch();
+                
 
-                download videosearch = new download();
+                Download videosearch = new Download();
                 videosearch.Title = item.Title;
                 videosearch.author = item.Author;
                 videosearch.Url = item.Url;
@@ -37,12 +39,17 @@ namespace YouStream
                 {
                     videosearch.Thumbnail = Image.FromStream(MS);
                 }
-
                 list.Add(videosearch);
-                panel_video.Controls.Add(lol);
-                lol.Show();
-                lol.Location = new Point(0, 100);
+                UserControl_videosearch video_panel = new UserControl_videosearch();
 
+                panel_video.Controls.Add(video_panel);
+                video_panel.label_Title.Text = videosearch.Title;
+                video_panel.label_Author.Text = videosearch.author;
+                video_panel.Thumbnail.Image = videosearch.Thumbnail;
+                video_panel.Url = videosearch.Url;
+                video_panel.Thumbnail.Size = new Size(246, 138);
+                video_panel.Location = new Point(0, height);
+                height += 152;
             }
         }
     }

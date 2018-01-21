@@ -31,31 +31,31 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Button_maximize));
             this.Panel_Left = new System.Windows.Forms.Panel();
             this.Panel_Bottom = new System.Windows.Forms.Panel();
+            this.Button_Volume = new Bunifu.Framework.UI.BunifuImageButton();
             this.Slider_Time = new Bunifu.Framework.UI.BunifuSlider();
             this.Panel_Left2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel_upperbar = new System.Windows.Forms.Panel();
-            this.main_panel = new System.Windows.Forms.Panel();
-            this.Button_minimize = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Button_close = new Bunifu.Framework.UI.BunifuImageButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Button_playlists = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_favorites = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_download = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_RecentlyPlayed = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_MyMusic = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_AddPlaylist = new Bunifu.Framework.UI.BunifuImageButton();
-            this.Button_Volume = new Bunifu.Framework.UI.BunifuImageButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_upperbar = new System.Windows.Forms.Panel();
+            this.Button_minimize = new Bunifu.Framework.UI.BunifuImageButton();
+            this.Button_close = new Bunifu.Framework.UI.BunifuImageButton();
+            this.main_panel = new System.Windows.Forms.Panel();
             this.Panel_Bottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).BeginInit();
             this.Panel_Left2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_upperbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Left
@@ -77,6 +77,22 @@
             this.Panel_Bottom.Name = "Panel_Bottom";
             this.Panel_Bottom.Size = new System.Drawing.Size(994, 61);
             this.Panel_Bottom.TabIndex = 0;
+            // 
+            // Button_Volume
+            // 
+            this.Button_Volume.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Volume.ErrorImage = null;
+            this.Button_Volume.Image = global::YouStream.Properties.Resources.Volume_Icon;
+            this.Button_Volume.ImageActive = null;
+            this.Button_Volume.InitialImage = null;
+            this.Button_Volume.Location = new System.Drawing.Point(950, 15);
+            this.Button_Volume.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_Volume.Name = "Button_Volume";
+            this.Button_Volume.Size = new System.Drawing.Size(30, 32);
+            this.Button_Volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.Button_Volume.TabIndex = 1;
+            this.Button_Volume.TabStop = false;
+            this.Button_Volume.Zoom = 7;
             // 
             // Slider_Time
             // 
@@ -108,86 +124,6 @@
             this.Panel_Left2.Name = "Panel_Left2";
             this.Panel_Left2.Size = new System.Drawing.Size(281, 589);
             this.Panel_Left2.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Location = new System.Drawing.Point(0, 305);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 284);
-            this.panel1.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 31);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 61);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel_upperbar
-            // 
-            this.panel_upperbar.Controls.Add(this.Button_minimize);
-            this.panel_upperbar.Controls.Add(this.Button_close);
-            this.panel_upperbar.Location = new System.Drawing.Point(0, 2);
-            this.panel_upperbar.Name = "panel_upperbar";
-            this.panel_upperbar.Size = new System.Drawing.Size(1050, 30);
-            this.panel_upperbar.TabIndex = 7;
-            this.panel_upperbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_upperbar_MouseDown);
-            // 
-            // main_panel
-            // 
-            this.main_panel.Location = new System.Drawing.Point(346, 40);
-            this.main_panel.Name = "main_panel";
-            this.main_panel.Size = new System.Drawing.Size(692, 575);
-            this.main_panel.TabIndex = 8;
-            // 
-            // Button_minimize
-            // 
-            this.Button_minimize.BackColor = System.Drawing.Color.Transparent;
-            this.Button_minimize.ErrorImage = null;
-            this.Button_minimize.Image = ((System.Drawing.Image)(resources.GetObject("Button_minimize.Image")));
-            this.Button_minimize.ImageActive = null;
-            this.Button_minimize.InitialImage = null;
-            this.Button_minimize.Location = new System.Drawing.Point(994, 2);
-            this.Button_minimize.Margin = new System.Windows.Forms.Padding(2);
-            this.Button_minimize.Name = "Button_minimize";
-            this.Button_minimize.Size = new System.Drawing.Size(26, 26);
-            this.Button_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Button_minimize.TabIndex = 10;
-            this.Button_minimize.TabStop = false;
-            this.Button_minimize.Zoom = 10;
-            this.Button_minimize.Click += new System.EventHandler(this.Button_minimize_Click);
-            // 
-            // Button_close
-            // 
-            this.Button_close.BackColor = System.Drawing.Color.Transparent;
-            this.Button_close.ErrorImage = null;
-            this.Button_close.Image = ((System.Drawing.Image)(resources.GetObject("Button_close.Image")));
-            this.Button_close.ImageActive = null;
-            this.Button_close.InitialImage = null;
-            this.Button_close.Location = new System.Drawing.Point(1022, 2);
-            this.Button_close.Margin = new System.Windows.Forms.Padding(2);
-            this.Button_close.Name = "Button_close";
-            this.Button_close.Size = new System.Drawing.Size(26, 26);
-            this.Button_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Button_close.TabIndex = 8;
-            this.Button_close.TabStop = false;
-            this.Button_close.Zoom = 10;
-            this.Button_close.Click += new System.EventHandler(this.Button_close_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // Button_playlists
             // 
@@ -385,21 +321,85 @@
             this.Button_AddPlaylist.TabStop = false;
             this.Button_AddPlaylist.Zoom = 10;
             // 
-            // Button_Volume
+            // panel1
             // 
-            this.Button_Volume.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Volume.ErrorImage = null;
-            this.Button_Volume.Image = global::YouStream.Properties.Resources.Volume_Icon;
-            this.Button_Volume.ImageActive = null;
-            this.Button_Volume.InitialImage = null;
-            this.Button_Volume.Location = new System.Drawing.Point(950, 15);
-            this.Button_Volume.Margin = new System.Windows.Forms.Padding(2);
-            this.Button_Volume.Name = "Button_Volume";
-            this.Button_Volume.Size = new System.Drawing.Size(30, 32);
-            this.Button_Volume.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.Button_Volume.TabIndex = 1;
-            this.Button_Volume.TabStop = false;
-            this.Button_Volume.Zoom = 7;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.panel1.Location = new System.Drawing.Point(0, 305);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(281, 284);
+            this.panel1.TabIndex = 2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(0, 31);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(337, 61);
+            this.panel2.TabIndex = 6;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel_upperbar
+            // 
+            this.panel_upperbar.Controls.Add(this.Button_minimize);
+            this.panel_upperbar.Controls.Add(this.Button_close);
+            this.panel_upperbar.Location = new System.Drawing.Point(0, 2);
+            this.panel_upperbar.Name = "panel_upperbar";
+            this.panel_upperbar.Size = new System.Drawing.Size(1050, 30);
+            this.panel_upperbar.TabIndex = 7;
+            this.panel_upperbar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_upperbar_MouseDown);
+            // 
+            // Button_minimize
+            // 
+            this.Button_minimize.BackColor = System.Drawing.Color.Transparent;
+            this.Button_minimize.ErrorImage = null;
+            this.Button_minimize.Image = ((System.Drawing.Image)(resources.GetObject("Button_minimize.Image")));
+            this.Button_minimize.ImageActive = null;
+            this.Button_minimize.InitialImage = null;
+            this.Button_minimize.Location = new System.Drawing.Point(994, 2);
+            this.Button_minimize.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_minimize.Name = "Button_minimize";
+            this.Button_minimize.Size = new System.Drawing.Size(26, 26);
+            this.Button_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Button_minimize.TabIndex = 10;
+            this.Button_minimize.TabStop = false;
+            this.Button_minimize.Zoom = 10;
+            this.Button_minimize.Click += new System.EventHandler(this.Button_minimize_Click);
+            // 
+            // Button_close
+            // 
+            this.Button_close.BackColor = System.Drawing.Color.Transparent;
+            this.Button_close.ErrorImage = null;
+            this.Button_close.Image = ((System.Drawing.Image)(resources.GetObject("Button_close.Image")));
+            this.Button_close.ImageActive = null;
+            this.Button_close.InitialImage = null;
+            this.Button_close.Location = new System.Drawing.Point(1022, 2);
+            this.Button_close.Margin = new System.Windows.Forms.Padding(2);
+            this.Button_close.Name = "Button_close";
+            this.Button_close.Size = new System.Drawing.Size(26, 26);
+            this.Button_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Button_close.TabIndex = 8;
+            this.Button_close.TabStop = false;
+            this.Button_close.Zoom = 10;
+            this.Button_close.Click += new System.EventHandler(this.Button_close_Click);
+            // 
+            // main_panel
+            // 
+            this.main_panel.Location = new System.Drawing.Point(346, 32);
+            this.main_panel.Name = "main_panel";
+            this.main_panel.Size = new System.Drawing.Size(692, 583);
+            this.main_panel.TabIndex = 8;
             // 
             // Button_maximize
             // 
@@ -419,14 +419,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Panel_Bottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).EndInit();
             this.Panel_Left2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_upperbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).EndInit();
             this.ResumeLayout(false);
 
         }
