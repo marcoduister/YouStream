@@ -41,11 +41,11 @@
             this.label_name_song.AutoEllipsis = true;
             this.label_name_song.AutoSize = true;
             this.label_name_song.CausesValidation = false;
-            this.label_name_song.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_name_song.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_name_song.ForeColor = System.Drawing.Color.Gray;
             this.label_name_song.Location = new System.Drawing.Point(151, 17);
             this.label_name_song.Name = "label_name_song";
-            this.label_name_song.Size = new System.Drawing.Size(237, 44);
+            this.label_name_song.Size = new System.Drawing.Size(178, 34);
             this.label_name_song.TabIndex = 6;
             this.label_name_song.Text = "NF - NO NAME";
             this.label_name_song.UseCompatibleTextRendering = true;
@@ -55,7 +55,7 @@
             this.button_play.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.button_play.Image = ((System.Drawing.Image)(resources.GetObject("button_play.Image")));
             this.button_play.ImageActive = null;
-            this.button_play.Location = new System.Drawing.Point(528, 4);
+            this.button_play.Location = new System.Drawing.Point(567, 4);
             this.button_play.Name = "button_play";
             this.button_play.Size = new System.Drawing.Size(71, 71);
             this.button_play.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.label_name_song);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserControl_my_music_result";
-            this.Size = new System.Drawing.Size(689, 76);
+            this.Size = new System.Drawing.Size(669, 76);
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
