@@ -91,6 +91,12 @@
     <Compile Include="UserControl_my_Music.Designer.cs">
       <DependentUpon>UserControl_my_Music.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_my_music_result.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_my_music_result.Designer.cs">
+      <DependentUpon>UserControl_my_music_result.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Playlists.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_my_Music.resx">
       <DependentUpon>UserControl_my_Music.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_my_music_result.resx">
+      <DependentUpon>UserControl_my_music_result.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Playlists.resx">
       <DependentUpon>UserControl_Playlists.cs</DependentUpon>

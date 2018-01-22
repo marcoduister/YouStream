@@ -25,7 +25,8 @@ namespace YouStream
         {
             var youTube = YouTube.Default; // starting point for YouTube actions
             var video =  youTube.GetVideo(link); // gets a Video object with info about the video
-            string loc = @"D:\marco\Music\youstream\" + video.FullName;
+            string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            string loc = path +"\\youstream\\"+ video.FullName;
             File.WriteAllBytes(loc, video.GetBytes());
 
             var inputFile = new MediaFile { Filename = loc };

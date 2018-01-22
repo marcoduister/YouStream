@@ -99,7 +99,7 @@
             this.panel_video.AutoScroll = true;
             this.panel_video.Location = new System.Drawing.Point(3, 82);
             this.panel_video.Name = "panel_video";
-            this.panel_video.Size = new System.Drawing.Size(689, 493);
+            this.panel_video.Size = new System.Drawing.Size(689, 498);
             this.panel_video.TabIndex = 2;
             // 
             // UserControl_Download
@@ -110,7 +110,8 @@
             this.Controls.Add(this.panel_video);
             this.Controls.Add(this.panel1);
             this.Name = "UserControl_Download";
-            this.Size = new System.Drawing.Size(692, 575);
+            this.Size = new System.Drawing.Size(692, 583);
+            this.Tag = "";
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

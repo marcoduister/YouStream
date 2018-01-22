@@ -18,8 +18,9 @@ namespace YouStream
         public UserControl_Download()
         {
             InitializeComponent();
-        }
 
+        }
+        
         private void button_search_Click(object sender, EventArgs e)
         {
             VideoSearch items = new VideoSearch();
