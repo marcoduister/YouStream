@@ -142,4 +142,16 @@
   <data name="Transparent_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Transparent_Black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="String" xml:space="preserve">
+    <value>UserControl_Favorites</value>
+  </data>
+  <data name="Favorites_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favorites off.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Favorites_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Favorites on.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="list" xml:space="preserve">
+    <value />
+  </data>
 </root>

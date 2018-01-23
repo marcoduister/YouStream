@@ -16,5 +16,22 @@ namespace YouStream
         {
             InitializeComponent();
         }
+
+        public static bool Favorites;
+        private void Button_Favorites_Click(object sender, EventArgs e)
+        {
+
+            if (Favorites)
+            {
+                Button_Favorites.Image = Properties.Resources.Favorites_off;
+                Favorites = false;
+            }
+            else
+            {
+                Button_Favorites.Image = Properties.Resources.Favorites_on;
+                Favorites = true;
+            }
+            
+        }
     }
 }

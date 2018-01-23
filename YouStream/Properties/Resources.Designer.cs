@@ -83,6 +83,35 @@ namespace YouStream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Favorites_off {
+            get {
+                object obj = ResourceManager.GetObject("Favorites_off", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Favorites_on {
+            get {
+                object obj = ResourceManager.GetObject("Favorites_on", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        internal static string list {
+            get {
+                return ResourceManager.GetString("list", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap My_Music_Icon {
             get {
                 object obj = ResourceManager.GetObject("My_Music_Icon", resourceCulture);
@@ -117,6 +146,15 @@ namespace YouStream.Properties {
             get {
                 object obj = ResourceManager.GetObject("Recently_Played_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UserControl_Favorites.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

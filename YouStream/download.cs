@@ -23,10 +23,12 @@ namespace YouStream
 
         public static void SaveVideoToDisk(string link)
         {
+
             var youTube = YouTube.Default; // starting point for YouTube actions
             var video =  youTube.GetVideo(link); // gets a Video object with info about the video
             string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             string loc = path +"\\youstream\\"+ video.FullName.ToLower();
+            
             File.WriteAllBytes(loc, video.GetBytes());
 
             var inputFile = new MediaFile { Filename = loc };

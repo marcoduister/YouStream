@@ -203,5 +203,14 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Favorites off.png" />
+    <None Include="Resources\Favorites on.png" />
+    <Content Include="Resources\Favorites-off.png" />
+    <Content Include="Resources\Favorites-on.png" />
+    <None Include="Resources\icons8_Star_Filled_96px.png" />
+    <None Include="Resources\icons8_Christmas_Star_96px.png" />
+    <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
