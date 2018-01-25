@@ -19,7 +19,10 @@ namespace YouStream
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            List<string> favlist = Properties.Settings.Default.fav_list.Split(',').ToList();
+            Favorites.favoritelist.Clear();
+            foreach (string item in favlist)
+            {   Favorites.favoritelist.Add(item);   }
         }
 
         #region menu
@@ -93,8 +96,21 @@ namespace YouStream
             this.WindowState = FormWindowState.Minimized;
         }
 
+
         #endregion
 
-
+        public string temp;
+        private void Button_maximize_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            foreach(string item in Favorites.favoritelist)
+            {
+                if(item == "")
+                {      
+                }
+                else { temp += item + ","; }
+            }
+            Properties.Settings.Default.fav_list = temp;
+            Properties.Settings.Default.Save();
+        }
     }
 }

@@ -87,7 +87,7 @@
             this.button_search.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button_search.Textcolor = System.Drawing.Color.White;
             this.button_search.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.button_search.Click += new System.EventHandler(this.button_search_Click);
+            this.button_search.Click += new System.EventHandler(this.Button_search_Click);
             // 
             // Textbox_search
             // 

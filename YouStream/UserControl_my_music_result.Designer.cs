@@ -100,6 +100,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "UserControl_my_music_result";
             this.Size = new System.Drawing.Size(669, 76);
+            this.Load += new System.EventHandler(this.UserControl_my_music_result_Load);
             ((System.ComponentModel.ISupportInitialize)(this.button_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_Favorites)).EndInit();

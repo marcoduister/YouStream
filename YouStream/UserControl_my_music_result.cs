@@ -17,21 +17,16 @@ namespace YouStream
             InitializeComponent();
         }
 
-        public static bool Favorites;
+        public string path_video { get; set; }
+        
         private void Button_Favorites_Click(object sender, EventArgs e)
         {
+            Favorites.FavoritesMT(path_video, Button_Favorites);
+        }
 
-            if (Favorites)
-            {
-                Button_Favorites.Image = Properties.Resources.Favorites_off;
-                Favorites = false;
-            }
-            else
-            {
-                Button_Favorites.Image = Properties.Resources.Favorites_on;
-                Favorites = true;
-            }
-            
+        private void UserControl_my_music_result_Load(object sender, EventArgs e)
+        {
+            Favorites.FavoritesLT(path_video, Button_Favorites);
         }
     }
 }

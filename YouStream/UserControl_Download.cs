@@ -23,6 +23,7 @@ namespace YouStream
         
         private void button_search_Click(object sender, EventArgs e)
         {
+
             panel_video.Controls.Clear();
             VideoSearch items = new VideoSearch();
             List<Download> list = new List<Download>();

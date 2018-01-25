@@ -42,20 +42,20 @@
             this.Button_AddPlaylist = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_upperbar = new System.Windows.Forms.Panel();
             this.Button_minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.Button_close = new Bunifu.Framework.UI.BunifuImageButton();
             this.main_panel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Panel_Bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).BeginInit();
             this.Panel_Left2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_upperbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel_Left
@@ -146,7 +146,7 @@
             this.Button_playlists.IconVisible = true;
             this.Button_playlists.IconZoom = 80D;
             this.Button_playlists.IsTab = false;
-            this.Button_playlists.Location = new System.Drawing.Point(0, 253);
+            this.Button_playlists.Location = new System.Drawing.Point(0, 255);
             this.Button_playlists.Name = "Button_playlists";
             this.Button_playlists.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_playlists.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -182,7 +182,7 @@
             this.Button_favorites.IconVisible = true;
             this.Button_favorites.IconZoom = 80D;
             this.Button_favorites.IsTab = false;
-            this.Button_favorites.Location = new System.Drawing.Point(0, 205);
+            this.Button_favorites.Location = new System.Drawing.Point(0, 207);
             this.Button_favorites.Name = "Button_favorites";
             this.Button_favorites.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_favorites.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -218,7 +218,7 @@
             this.Button_download.IconVisible = true;
             this.Button_download.IconZoom = 80D;
             this.Button_download.IsTab = false;
-            this.Button_download.Location = new System.Drawing.Point(0, 157);
+            this.Button_download.Location = new System.Drawing.Point(0, 159);
             this.Button_download.Name = "Button_download";
             this.Button_download.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_download.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -254,7 +254,7 @@
             this.Button_RecentlyPlayed.IconVisible = true;
             this.Button_RecentlyPlayed.IconZoom = 80D;
             this.Button_RecentlyPlayed.IsTab = false;
-            this.Button_RecentlyPlayed.Location = new System.Drawing.Point(0, 109);
+            this.Button_RecentlyPlayed.Location = new System.Drawing.Point(0, 111);
             this.Button_RecentlyPlayed.Name = "Button_RecentlyPlayed";
             this.Button_RecentlyPlayed.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_RecentlyPlayed.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -290,7 +290,7 @@
             this.Button_MyMusic.IconVisible = true;
             this.Button_MyMusic.IconZoom = 80D;
             this.Button_MyMusic.IsTab = false;
-            this.Button_MyMusic.Location = new System.Drawing.Point(0, 61);
+            this.Button_MyMusic.Location = new System.Drawing.Point(0, 63);
             this.Button_MyMusic.Name = "Button_MyMusic";
             this.Button_MyMusic.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_MyMusic.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -312,7 +312,7 @@
             this.Button_AddPlaylist.Image = global::YouStream.Properties.Resources.Add_Playlist_Icon;
             this.Button_AddPlaylist.ImageActive = null;
             this.Button_AddPlaylist.InitialImage = null;
-            this.Button_AddPlaylist.Location = new System.Drawing.Point(236, 253);
+            this.Button_AddPlaylist.Location = new System.Drawing.Point(236, 255);
             this.Button_AddPlaylist.Margin = new System.Windows.Forms.Padding(2);
             this.Button_AddPlaylist.Name = "Button_AddPlaylist";
             this.Button_AddPlaylist.Size = new System.Drawing.Size(45, 49);
@@ -324,31 +324,21 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.panel1.Location = new System.Drawing.Point(0, 305);
+            this.panel1.Location = new System.Drawing.Point(0, 308);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(281, 284);
+            this.panel1.Size = new System.Drawing.Size(281, 281);
             this.panel1.TabIndex = 2;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(0, 31);
+            this.panel2.Location = new System.Drawing.Point(56, 31);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 61);
+            this.panel2.Size = new System.Drawing.Size(281, 58);
             this.panel2.TabIndex = 6;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // panel_upperbar
             // 
@@ -401,6 +391,16 @@
             this.main_panel.Size = new System.Drawing.Size(692, 583);
             this.main_panel.TabIndex = 8;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Button_maximize
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,16 +417,17 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Button_maximize";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Button_maximize_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Panel_Bottom.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).EndInit();
             this.Panel_Left2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Button_AddPlaylist)).EndInit();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_upperbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,12 +446,12 @@
         private Bunifu.Framework.UI.BunifuFlatButton Button_MyMusic;
         private Bunifu.Framework.UI.BunifuImageButton Button_AddPlaylist;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel_upperbar;
         private Bunifu.Framework.UI.BunifuImageButton Button_minimize;
         private Bunifu.Framework.UI.BunifuImageButton Button_close;
         public System.Windows.Forms.Panel main_panel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

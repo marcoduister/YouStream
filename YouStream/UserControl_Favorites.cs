@@ -16,5 +16,53 @@ namespace YouStream
         {
             InitializeComponent();
         }
+
+        public int height;
+        private void UserControl_Favorites_Load(object sender, EventArgs e)
+        {
+            foreach( string item in Favorites.favoritelist)
+            {
+                if(item!="")
+                {
+                    UserControl_my_music_result music = new UserControl_my_music_result();
+                    int count = UserControl_my_Music.loc.Count();
+                    string name = item.Remove(0, count);
+                    music.label_name_song.Text = name.Remove(name.Length - 4);
+                    music.path_video = item;
+                    panel_video.Controls.Add(music);
+                    music.Location = new Point(0, height);
+                    height += 84;
+                }
+            }
+        }
+
+        private void button_search_Click(object sender, EventArgs e)
+        {
+            Lookup();
+        }
+
+        private void Lookup()
+        {
+            height = 0;
+            panel_video.Controls.Clear();
+            
+            foreach (string result in Favorites.favoritelist)
+            {
+                if (result != "")
+                {
+                    if (result.Contains(Textbox_search.text.ToUpper()) || result.Contains(Textbox_search.text.ToLower()))
+                    {
+                        UserControl_my_music_result music = new UserControl_my_music_result();
+                        int count = UserControl_my_Music.loc.Count();
+                        string name = result.Remove(0, count);
+                        music.label_name_song.Text = name.Remove(name.Length - 4);
+                        music.path_video = result;
+                        panel_video.Controls.Add(music);
+                        music.Location = new Point(0, height);
+                        height += 84;
+                    }
+                }
+            }
+        }
     }
 }

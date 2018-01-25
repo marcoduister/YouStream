@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="download.cs" />
+    <Compile Include="Favorites.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +212,9 @@
     <None Include="Resources\icons8_Star_Filled_96px.png" />
     <None Include="Resources\icons8_Christmas_Star_96px.png" />
     <None Include="Resources\Image1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
