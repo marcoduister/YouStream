@@ -17,7 +17,7 @@ namespace YouStream
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Button_maximize());
+            Application.Run(new Form1());
         }
     }
 }

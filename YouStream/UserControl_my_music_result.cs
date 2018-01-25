@@ -28,5 +28,12 @@ namespace YouStream
         {
             Favorites.FavoritesLT(path_video, Button_Favorites);
         }
+
+        private void button_play_Click(object sender, EventArgs e)
+        {
+            Form1.MusicPath = path_video;
+            Form1 F1 = new Form1();
+            F1.StartMusic();
+        }
     }
 }

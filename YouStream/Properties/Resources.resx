@@ -154,4 +154,7 @@
   <data name="list" xml:space="preserve">
     <value />
   </data>
+  <data name="YouStream_Empty_Mp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\YouStream Empty Mp3.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

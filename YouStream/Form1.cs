@@ -3,20 +3,46 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 namespace YouStream
 {
-    //test
-    public partial class Button_maximize : Form
+    public partial class Form1 : Form
     {
-        public Button_maximize()
+        public static string MusicPath { get; set; }
+        public musicstate MusicState { get; set; }
+        public FileStream ms { get; set; }
+        public Mp3FileReader rdr { get; set; }
+        public WaveStream wavStream { get; set; }
+        public BlockAlignReductionStream _barStream { get; set; }
+        public WaveOut waveOut { get; set; }
+
+
+        public Form1()
         {
             InitializeComponent();
+
+            var file = $"{Path.GetTempPath()}emptyMP3.mp3";
+            if (!File.Exists(file))
+            {
+                using (Stream output = new FileStream(file, FileMode.Create))
+                {
+                    output.Write(Properties.Resources.YouStream_Empty_Mp3, 0, Properties.Resources.YouStream_Empty_Mp3.Length);
+                }
+            }
+            ms = File.OpenRead($"{Path.GetTempPath()}emptyMP3.mp3");
+            rdr = new Mp3FileReader(ms);
+            wavStream = WaveFormatConversionStream.CreatePcmStream(rdr);
+            _barStream = new BlockAlignReductionStream(wavStream);
+            waveOut = new WaveOut(WaveCallbackInfo.FunctionCallback());
+            waveOut.Init(_barStream);
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -112,6 +138,31 @@ namespace YouStream
             }
             Properties.Settings.Default.fav_list = temp;
             Properties.Settings.Default.Save();
+        }
+
+        #region Music Control Methodes
+
+        public void StartMusic()
+        {
+            ms = File.OpenRead(MusicPath);
+            rdr = new Mp3FileReader(ms);
+            wavStream = WaveFormatConversionStream.CreatePcmStream(rdr);
+            _barStream = new BlockAlignReductionStream(wavStream);
+            waveOut.Init(_barStream); 
+
+            waveOut.Stop();
+            rdr.Position = 0;
+            waveOut.Play();
+            MusicState = musicstate.Playing;
+        }
+
+        #endregion
+
+        public enum musicstate
+        {
+            Playing,
+            Paused,
+            Stopped
         }
     }
 }

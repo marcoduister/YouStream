@@ -37,12 +37,15 @@
     </Reference>
     <Reference Include="libvideo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\marco\Desktop\libvideo.dll</HintPath>
+      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\libvideo.dll</HintPath>
     </Reference>
     <Reference Include="MediaToolkit, Version=1.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MediaToolkit.1.1.0.1\lib\net40\MediaToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="NAudio">
+      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\NAudio.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -205,6 +208,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\YouStream Empty Mp3.mp3" />
     <None Include="Resources\Favorites off.png" />
     <None Include="Resources\Favorites on.png" />
     <Content Include="Resources\Favorites-off.png" />
