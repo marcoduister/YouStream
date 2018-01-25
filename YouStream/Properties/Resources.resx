@@ -157,4 +157,13 @@
   <data name="YouStream_Empty_Mp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\YouStream Empty Mp3.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="AForge_Video" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AForge.Video.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="libvideo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\libvideo.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NAudio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NAudio.dll;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

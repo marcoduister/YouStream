@@ -139,7 +139,7 @@ namespace YouStream
             Properties.Settings.Default.fav_list = temp;
             Properties.Settings.Default.Save();
         }
-
+        
         #region Music Control Methodes
 
         public void StartMusic()

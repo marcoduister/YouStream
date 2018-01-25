@@ -208,9 +208,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\libvideo.dll" />
+    <None Include="Resources\NAudio.dll" />
     <None Include="Resources\YouStream Empty Mp3.mp3" />
     <None Include="Resources\Favorites off.png" />
     <None Include="Resources\Favorites on.png" />
+    <None Include="Resources\AForge.Video.dll" />
     <Content Include="Resources\Favorites-off.png" />
     <Content Include="Resources\Favorites-on.png" />
     <None Include="Resources\icons8_Star_Filled_96px.png" />

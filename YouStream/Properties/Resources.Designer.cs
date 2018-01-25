@@ -71,6 +71,16 @@ namespace YouStream.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] AForge_Video {
+            get {
+                object obj = ResourceManager.GetObject("AForge_Video", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Favorites_Icon {
@@ -101,6 +111,16 @@ namespace YouStream.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] libvideo {
+            get {
+                object obj = ResourceManager.GetObject("libvideo", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
         internal static string list {
@@ -116,6 +136,16 @@ namespace YouStream.Properties {
             get {
                 object obj = ResourceManager.GetObject("My_Music_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] NAudio {
+            get {
+                object obj = ResourceManager.GetObject("NAudio", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
