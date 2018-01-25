@@ -11,6 +11,7 @@ namespace YouStream
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
+        //start
         [STAThread]
         static void Main()
         {
