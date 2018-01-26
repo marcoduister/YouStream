@@ -36,7 +36,7 @@
             this.Button_playlists = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_favorites = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_download = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Button_RecentlyPlayed = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.Button_NowPlaying = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_MyMusic = new Bunifu.Framework.UI.BunifuFlatButton();
             this.Button_AddPlaylist = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -98,7 +98,7 @@
             this.Panel_Left2.Controls.Add(this.Button_playlists);
             this.Panel_Left2.Controls.Add(this.Button_favorites);
             this.Panel_Left2.Controls.Add(this.Button_download);
-            this.Panel_Left2.Controls.Add(this.Button_RecentlyPlayed);
+            this.Panel_Left2.Controls.Add(this.Button_NowPlaying);
             this.Panel_Left2.Controls.Add(this.Button_MyMusic);
             this.Panel_Left2.Controls.Add(this.Button_AddPlaylist);
             this.Panel_Left2.Controls.Add(this.panel1);
@@ -130,7 +130,7 @@
             this.Button_playlists.IconZoom = 80D;
             this.Button_playlists.IsTab = false;
             this.Button_playlists.Location = new System.Drawing.Point(0, 314);
-            this.Button_playlists.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_playlists.Margin = new System.Windows.Forms.Padding(5);
             this.Button_playlists.Name = "Button_playlists";
             this.Button_playlists.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_playlists.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -167,7 +167,7 @@
             this.Button_favorites.IconZoom = 80D;
             this.Button_favorites.IsTab = false;
             this.Button_favorites.Location = new System.Drawing.Point(0, 255);
-            this.Button_favorites.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_favorites.Margin = new System.Windows.Forms.Padding(5);
             this.Button_favorites.Name = "Button_favorites";
             this.Button_favorites.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_favorites.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -204,7 +204,7 @@
             this.Button_download.IconZoom = 80D;
             this.Button_download.IsTab = false;
             this.Button_download.Location = new System.Drawing.Point(0, 196);
-            this.Button_download.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_download.Margin = new System.Windows.Forms.Padding(5);
             this.Button_download.Name = "Button_download";
             this.Button_download.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_download.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -219,42 +219,42 @@
             this.Button_download.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Button_download.Click += new System.EventHandler(this.Button_download_Click);
             // 
-            // Button_RecentlyPlayed
+            // Button_NowPlaying
             // 
-            this.Button_RecentlyPlayed.Activecolor = System.Drawing.Color.Orange;
-            this.Button_RecentlyPlayed.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Button_RecentlyPlayed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Button_RecentlyPlayed.BorderRadius = 0;
-            this.Button_RecentlyPlayed.ButtonText = "Recently Played                   ";
-            this.Button_RecentlyPlayed.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Button_RecentlyPlayed.DisabledColor = System.Drawing.Color.Gray;
-            this.Button_RecentlyPlayed.Iconcolor = System.Drawing.Color.Transparent;
-            this.Button_RecentlyPlayed.Iconimage = global::YouStream.Properties.Resources.Recently_Played_Icon;
-            this.Button_RecentlyPlayed.Iconimage_right = null;
-            this.Button_RecentlyPlayed.Iconimage_right_Selected = null;
-            this.Button_RecentlyPlayed.Iconimage_Selected = null;
-            this.Button_RecentlyPlayed.IconMarginLeft = 0;
-            this.Button_RecentlyPlayed.IconMarginRight = 0;
-            this.Button_RecentlyPlayed.IconRightVisible = true;
-            this.Button_RecentlyPlayed.IconRightZoom = 0D;
-            this.Button_RecentlyPlayed.IconVisible = true;
-            this.Button_RecentlyPlayed.IconZoom = 80D;
-            this.Button_RecentlyPlayed.IsTab = false;
-            this.Button_RecentlyPlayed.Location = new System.Drawing.Point(0, 137);
-            this.Button_RecentlyPlayed.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
-            this.Button_RecentlyPlayed.Name = "Button_RecentlyPlayed";
-            this.Button_RecentlyPlayed.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
-            this.Button_RecentlyPlayed.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.Button_RecentlyPlayed.OnHoverTextColor = System.Drawing.Color.White;
-            this.Button_RecentlyPlayed.selected = false;
-            this.Button_RecentlyPlayed.Size = new System.Drawing.Size(375, 59);
-            this.Button_RecentlyPlayed.TabIndex = 0;
-            this.Button_RecentlyPlayed.TabStop = false;
-            this.Button_RecentlyPlayed.Text = "Recently Played                   ";
-            this.Button_RecentlyPlayed.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Button_RecentlyPlayed.Textcolor = System.Drawing.Color.White;
-            this.Button_RecentlyPlayed.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button_RecentlyPlayed.Click += new System.EventHandler(this.Button_RecentlyPlayed_Click);
+            this.Button_NowPlaying.Activecolor = System.Drawing.Color.Orange;
+            this.Button_NowPlaying.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Button_NowPlaying.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Button_NowPlaying.BorderRadius = 0;
+            this.Button_NowPlaying.ButtonText = "Now Playing                          ";
+            this.Button_NowPlaying.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Button_NowPlaying.DisabledColor = System.Drawing.Color.Gray;
+            this.Button_NowPlaying.Iconcolor = System.Drawing.Color.Transparent;
+            this.Button_NowPlaying.Iconimage = global::YouStream.Properties.Resources.Recently_Played_Icon;
+            this.Button_NowPlaying.Iconimage_right = null;
+            this.Button_NowPlaying.Iconimage_right_Selected = null;
+            this.Button_NowPlaying.Iconimage_Selected = null;
+            this.Button_NowPlaying.IconMarginLeft = 0;
+            this.Button_NowPlaying.IconMarginRight = 0;
+            this.Button_NowPlaying.IconRightVisible = true;
+            this.Button_NowPlaying.IconRightZoom = 0D;
+            this.Button_NowPlaying.IconVisible = true;
+            this.Button_NowPlaying.IconZoom = 80D;
+            this.Button_NowPlaying.IsTab = false;
+            this.Button_NowPlaying.Location = new System.Drawing.Point(0, 137);
+            this.Button_NowPlaying.Margin = new System.Windows.Forms.Padding(5);
+            this.Button_NowPlaying.Name = "Button_NowPlaying";
+            this.Button_NowPlaying.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.Button_NowPlaying.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
+            this.Button_NowPlaying.OnHoverTextColor = System.Drawing.Color.White;
+            this.Button_NowPlaying.selected = false;
+            this.Button_NowPlaying.Size = new System.Drawing.Size(375, 59);
+            this.Button_NowPlaying.TabIndex = 0;
+            this.Button_NowPlaying.TabStop = false;
+            this.Button_NowPlaying.Text = "Now Playing                          ";
+            this.Button_NowPlaying.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Button_NowPlaying.Textcolor = System.Drawing.Color.White;
+            this.Button_NowPlaying.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Button_NowPlaying.Click += new System.EventHandler(this.Button_RecentlyPlayed_Click);
             // 
             // Button_MyMusic
             // 
@@ -278,7 +278,7 @@
             this.Button_MyMusic.IconZoom = 80D;
             this.Button_MyMusic.IsTab = false;
             this.Button_MyMusic.Location = new System.Drawing.Point(0, 78);
-            this.Button_MyMusic.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Button_MyMusic.Margin = new System.Windows.Forms.Padding(5);
             this.Button_MyMusic.Name = "Button_MyMusic";
             this.Button_MyMusic.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
             this.Button_MyMusic.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
@@ -332,7 +332,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 71);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -344,7 +344,7 @@
             this.panel_upperbar.Controls.Add(this.Button_minimize);
             this.panel_upperbar.Controls.Add(this.Button_close);
             this.panel_upperbar.Location = new System.Drawing.Point(0, 2);
-            this.panel_upperbar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_upperbar.Margin = new System.Windows.Forms.Padding(4);
             this.panel_upperbar.Name = "panel_upperbar";
             this.panel_upperbar.Size = new System.Drawing.Size(1400, 37);
             this.panel_upperbar.TabIndex = 7;
@@ -387,7 +387,7 @@
             // main_panel
             // 
             this.main_panel.Location = new System.Drawing.Point(461, 39);
-            this.main_panel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.main_panel.Margin = new System.Windows.Forms.Padding(4);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(923, 718);
             this.main_panel.TabIndex = 8;
@@ -432,7 +432,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton Button_playlists;
         private Bunifu.Framework.UI.BunifuFlatButton Button_favorites;
         private Bunifu.Framework.UI.BunifuFlatButton Button_download;
-        private Bunifu.Framework.UI.BunifuFlatButton Button_RecentlyPlayed;
+        private Bunifu.Framework.UI.BunifuFlatButton Button_NowPlaying;
         private Bunifu.Framework.UI.BunifuFlatButton Button_MyMusic;
         private Bunifu.Framework.UI.BunifuImageButton Button_AddPlaylist;
         private System.Windows.Forms.Panel panel1;

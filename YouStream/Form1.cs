@@ -39,7 +39,7 @@ namespace YouStream
 
         private void Button_RecentlyPlayed_Click(object sender, EventArgs e)
         {
-            UserControl_Recently_played change = new UserControl_Recently_played();
+            UserControl_Now_Playing change = new UserControl_Now_Playing();
             Panel(change);
         }
         private void Button_download_Click(object sender, EventArgs e)

@@ -83,6 +83,26 @@ namespace YouStream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap FastBackward {
+            get {
+                object obj = ResourceManager.GetObject("FastBackward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FastForward {
+            get {
+                object obj = ResourceManager.GetObject("FastForward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Favorites_Icon {
             get {
                 object obj = ResourceManager.GetObject("Favorites_Icon", resourceCulture);
@@ -162,6 +182,26 @@ namespace YouStream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Pauze {
+            get {
+                object obj = ResourceManager.GetObject("Pauze", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Play {
+            get {
+                object obj = ResourceManager.GetObject("Play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Playlist_Icon {
             get {
                 object obj = ResourceManager.GetObject("Playlist_Icon", resourceCulture);
@@ -205,16 +245,6 @@ namespace YouStream.Properties {
             get {
                 object obj = ResourceManager.GetObject("Volume_Icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        internal static byte[] YouStream_Empty_Mp3 {
-            get {
-                object obj = ResourceManager.GetObject("YouStream_Empty_Mp3", resourceCulture);
-                return ((byte[])(obj));
             }
         }
     }

@@ -108,11 +108,11 @@
     <Compile Include="UserControl_Playlists.Designer.cs">
       <DependentUpon>UserControl_Playlists.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl_Recently_played.cs">
+    <Compile Include="UserControl_Now_Playing.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl_Recently_played.Designer.cs">
-      <DependentUpon>UserControl_Recently_played.cs</DependentUpon>
+    <Compile Include="UserControl_Now_Playing.Designer.cs">
+      <DependentUpon>UserControl_Now_Playing.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControl_videosearch.cs">
       <SubType>UserControl</SubType>
@@ -148,8 +148,8 @@
     <EmbeddedResource Include="UserControl_Playlists.resx">
       <DependentUpon>UserControl_Playlists.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl_Recently_played.resx">
-      <DependentUpon>UserControl_Recently_played.cs</DependentUpon>
+    <EmbeddedResource Include="UserControl_Now_Playing.resx">
+      <DependentUpon>UserControl_Now_Playing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_videosearch.resx">
       <DependentUpon>UserControl_videosearch.cs</DependentUpon>
@@ -209,12 +209,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Play.png" />
+    <None Include="Resources\Pauze.png" />
     <None Include="Resources\libvideo.dll" />
     <None Include="Resources\NAudio.dll" />
-    <None Include="Resources\YouStream Empty Mp3.mp3" />
     <None Include="Resources\Favorites off.png" />
     <None Include="Resources\Favorites on.png" />
     <None Include="Resources\AForge.Video.dll" />
+    <None Include="Resources\Fast Forward.png" />
+    <None Include="Resources\FastBackward.png" />
     <Content Include="Resources\Favorites-off.png" />
     <Content Include="Resources\Favorites-on.png" />
     <None Include="Resources\icons8_Star_Filled_96px.png" />
