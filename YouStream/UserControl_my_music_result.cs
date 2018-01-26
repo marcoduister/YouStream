@@ -31,9 +31,13 @@ namespace YouStream
 
         private void button_play_Click(object sender, EventArgs e)
         {
-            Form1.MusicPath = path_video;
-            Form1 F1 = new Form1();
-            F1.StartMusic();
+            if (Form1.Mp.MusicState != MusicPlayer.musicstate.Waiting)
+            {
+                Form1.Mp.Stop();
+            }
+
+            MusicPlayer.MusicPath = path_video;
+            Form1.Mp.StartMusic();
         }
     }
 }
