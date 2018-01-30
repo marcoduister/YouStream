@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace YouStream
@@ -16,6 +10,9 @@ namespace YouStream
         public UserControl_Now_Playing()
         {
             InitializeComponent();
+            TimerSetPosition.Enabled = true;
+            Label_MaximumTime.Text = Form1.Mp.MaxTimeString;
+            ProgressBar_MusicTIme.Maximum_Value = Form1.Mp.MaxTimeSeconds;
         }
 
         private void Button_PlayPause_Click(object sender, EventArgs e)
@@ -36,15 +33,21 @@ namespace YouStream
             }
         }
 
-        public void TurnOnTimer()
-        {
-            TimerSetPosition.Enabled = true;
-        }
-
         private void TimerSetPosition_Tick(object sender, EventArgs e)
         {
             Form1.Mp.GetPosition();
+            Label_CurrentTime.Text = Form1.Mp.curTimeString;
             ProgressBar_MusicTIme.Value = Form1.Mp.curTimeSeconds;
+        }
+
+        private void Button_FastForward_Click(object sender, EventArgs e)
+        {
+            Form1.Mp.WavStream.Skip(10);
+        }
+
+        private void Button_FastBackward_Click(object sender, EventArgs e)
+        {
+            Form1.Mp.Rdr.Position = 0;
         }
     }
 }

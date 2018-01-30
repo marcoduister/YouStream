@@ -33,8 +33,10 @@
             this.Button_FastForward = new Bunifu.Framework.UI.BunifuImageButton();
             this.Button_FastBackward = new Bunifu.Framework.UI.BunifuImageButton();
             this.Button_PlayPause = new Bunifu.Framework.UI.BunifuImageButton();
-            this.TimerSetPosition = new System.Windows.Forms.Timer(this.components);
+            this.Label_CurrentTime = new System.Windows.Forms.Label();
             this.ProgressBar_MusicTIme = new Bunifu.Framework.UI.BunifuProgressBar();
+            this.TimerSetPosition = new System.Windows.Forms.Timer(this.components);
+            this.Label_MaximumTime = new System.Windows.Forms.Label();
             this.Panel_MusicControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_FastForward)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_FastBackward)).BeginInit();
@@ -44,7 +46,6 @@
             // Panel_MusicControl
             // 
             this.Panel_MusicControl.BackColor = System.Drawing.Color.DarkOrange;
-            this.Panel_MusicControl.Controls.Add(this.ProgressBar_MusicTIme);
             this.Panel_MusicControl.Controls.Add(this.Button_FastForward);
             this.Panel_MusicControl.Controls.Add(this.Button_FastBackward);
             this.Panel_MusicControl.Controls.Add(this.Button_PlayPause);
@@ -67,6 +68,7 @@
             this.Button_FastForward.TabIndex = 2;
             this.Button_FastForward.TabStop = false;
             this.Button_FastForward.Zoom = 10;
+            this.Button_FastForward.Click += new System.EventHandler(this.Button_FastForward_Click);
             // 
             // Button_FastBackward
             // 
@@ -82,6 +84,7 @@
             this.Button_FastBackward.TabIndex = 1;
             this.Button_FastBackward.TabStop = false;
             this.Button_FastBackward.Zoom = 10;
+            this.Button_FastBackward.Click += new System.EventHandler(this.Button_FastBackward_Click);
             // 
             // Button_PlayPause
             // 
@@ -99,31 +102,54 @@
             this.Button_PlayPause.Zoom = 10;
             this.Button_PlayPause.Click += new System.EventHandler(this.Button_PlayPause_Click);
             // 
-            // TimerSetPosition
+            // Label_CurrentTime
             // 
-            this.TimerSetPosition.Interval = 1000;
-            this.TimerSetPosition.Tick += new System.EventHandler(this.TimerSetPosition_Tick);
+            this.Label_CurrentTime.AutoSize = true;
+            this.Label_CurrentTime.ForeColor = System.Drawing.Color.Orange;
+            this.Label_CurrentTime.Location = new System.Drawing.Point(10, 576);
+            this.Label_CurrentTime.Name = "Label_CurrentTime";
+            this.Label_CurrentTime.Size = new System.Drawing.Size(44, 17);
+            this.Label_CurrentTime.TabIndex = 0;
+            this.Label_CurrentTime.Text = "00:00";
             // 
             // ProgressBar_MusicTIme
             // 
             this.ProgressBar_MusicTIme.BackColor = System.Drawing.Color.Silver;
             this.ProgressBar_MusicTIme.BorderRadius = 5;
-            this.ProgressBar_MusicTIme.Location = new System.Drawing.Point(250, 44);
+            this.ProgressBar_MusicTIme.Location = new System.Drawing.Point(0, 597);
             this.ProgressBar_MusicTIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProgressBar_MusicTIme.MaximumValue = 100;
             this.ProgressBar_MusicTIme.Name = "ProgressBar_MusicTIme";
             this.ProgressBar_MusicTIme.ProgressColor = System.Drawing.Color.Black;
-            this.ProgressBar_MusicTIme.Size = new System.Drawing.Size(547, 12);
+            this.ProgressBar_MusicTIme.Size = new System.Drawing.Size(923, 12);
             this.ProgressBar_MusicTIme.TabIndex = 0;
             this.ProgressBar_MusicTIme.TabStop = false;
             this.ProgressBar_MusicTIme.Value = 0;
+            // 
+            // TimerSetPosition
+            // 
+            this.TimerSetPosition.Interval = 1000;
+            this.TimerSetPosition.Tick += new System.EventHandler(this.TimerSetPosition_Tick);
+            // 
+            // Label_MaximumTime
+            // 
+            this.Label_MaximumTime.AutoSize = true;
+            this.Label_MaximumTime.ForeColor = System.Drawing.Color.Orange;
+            this.Label_MaximumTime.Location = new System.Drawing.Point(869, 576);
+            this.Label_MaximumTime.Name = "Label_MaximumTime";
+            this.Label_MaximumTime.Size = new System.Drawing.Size(44, 17);
+            this.Label_MaximumTime.TabIndex = 0;
+            this.Label_MaximumTime.Text = "00:00";
             // 
             // UserControl_Now_Playing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls.Add(this.Label_MaximumTime);
+            this.Controls.Add(this.Label_CurrentTime);
             this.Controls.Add(this.Panel_MusicControl);
+            this.Controls.Add(this.ProgressBar_MusicTIme);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UserControl_Now_Playing";
             this.Size = new System.Drawing.Size(923, 708);
@@ -132,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Button_FastBackward)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_PlayPause)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -143,5 +170,7 @@
         private Bunifu.Framework.UI.BunifuImageButton Button_FastBackward;
         private System.Windows.Forms.Timer TimerSetPosition;
         private Bunifu.Framework.UI.BunifuProgressBar ProgressBar_MusicTIme;
+        private System.Windows.Forms.Label Label_CurrentTime;
+        private System.Windows.Forms.Label Label_MaximumTime;
     }
 }

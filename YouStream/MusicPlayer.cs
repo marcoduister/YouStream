@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NAudio.Utils;
+﻿using System.IO;
 using NAudio.Wave;
 
 namespace YouStream
@@ -21,6 +15,8 @@ namespace YouStream
         public WaveOut waveOut { get; set; }
         public string curTimeString { get; set; }
         public int curTimeSeconds { get; set; }
+        public string MaxTimeString { get; set; }
+        public int MaxTimeSeconds { get; set; }
 
         public MusicPlayer()
         {
@@ -36,6 +32,9 @@ namespace YouStream
             WavStream = WaveFormatConversionStream.CreatePcmStream(Rdr);
             BarStream = new BlockAlignReductionStream(WavStream);
             waveOut.Init(BarStream);
+            
+            MaxTimeString = WavStream.TotalTime.ToString("mm\\:ss");
+            MaxTimeSeconds = (int)WavStream.TotalTime.TotalSeconds;
 
             Rdr.Position = 0;
             waveOut.Play();

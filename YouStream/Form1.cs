@@ -1,12 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace YouStream
@@ -14,6 +8,7 @@ namespace YouStream
     public partial class Form1 : Form
     {
         public static MusicPlayer Mp = new MusicPlayer();
+        public bool MusicControlOn { get; set; }
 
         public Form1()
         {
@@ -73,11 +68,11 @@ namespace YouStream
 
         #region upperpanel
 
-        public const int WM_NCLBUTTONDOWN = 0xA1;
-        public const int HT_CAPTION = 0x2;
+        public const int WmNclbuttondown = 0xA1;
+        public const int HtCaption = 0x2;
 
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        public static extern int SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
 
@@ -86,7 +81,7 @@ namespace YouStream
             if (e.Button == MouseButtons.Left)
             {
                 ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+                SendMessage(Handle, WmNclbuttondown, HtCaption, 0);
             }
         }
 
@@ -98,13 +93,13 @@ namespace YouStream
 
         private void Button_minimize_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            WindowState = FormWindowState.Minimized;
         }
 
 
         #endregion
 
-        public string temp;
+        public string Temp;
         private void Button_maximize_FormClosing(object sender, FormClosingEventArgs e)
         {
             foreach(string item in Favorites.favoritelist)
@@ -112,10 +107,24 @@ namespace YouStream
                 if(item == "")
                 {      
                 }
-                else { temp += item + ","; }
+                else { Temp += item + ","; }
             }
-            Properties.Settings.Default.fav_list = temp;
+            Properties.Settings.Default.fav_list = Temp;
             Properties.Settings.Default.Save();
+        }
+
+        private void Button_Volume_Click(object sender, EventArgs e)
+        {
+            if (MusicControlOn == false)
+            {
+                userControlVolumeControl1.Visible = true;
+                MusicControlOn = true;
+            }
+            else if (MusicControlOn == true)
+            {
+                userControlVolumeControl1.Visible = false;
+                MusicControlOn = false;
+            }
         }
     }
 }

@@ -46,6 +46,7 @@
             this.Button_minimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.Button_close = new Bunifu.Framework.UI.BunifuImageButton();
             this.main_panel = new System.Windows.Forms.Panel();
+            this.userControlVolumeControl1 = new YouStream.UserControlVolumeControl();
             this.Panel_Bottom.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_Volume)).BeginInit();
             this.Panel_Left2.SuspendLayout();
@@ -55,6 +56,7 @@
             this.panel_upperbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).BeginInit();
+            this.main_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panel_Left
@@ -91,6 +93,7 @@
             this.Button_Volume.TabIndex = 1;
             this.Button_Volume.TabStop = false;
             this.Button_Volume.Zoom = 7;
+            this.Button_Volume.Click += new System.EventHandler(this.Button_Volume_Click);
             // 
             // Panel_Left2
             // 
@@ -386,11 +389,21 @@
             // 
             // main_panel
             // 
+            this.main_panel.Controls.Add(this.userControlVolumeControl1);
             this.main_panel.Location = new System.Drawing.Point(461, 39);
             this.main_panel.Margin = new System.Windows.Forms.Padding(4);
             this.main_panel.Name = "main_panel";
             this.main_panel.Size = new System.Drawing.Size(923, 718);
             this.main_panel.TabIndex = 8;
+            // 
+            // userControlVolumeControl1
+            // 
+            this.userControlVolumeControl1.BackColor = System.Drawing.Color.DarkGray;
+            this.userControlVolumeControl1.Location = new System.Drawing.Point(489, 563);
+            this.userControlVolumeControl1.Name = "userControlVolumeControl1";
+            this.userControlVolumeControl1.Size = new System.Drawing.Size(400, 150);
+            this.userControlVolumeControl1.TabIndex = 0;
+            this.userControlVolumeControl1.Visible = false;
             // 
             // Form1
             // 
@@ -419,6 +432,7 @@
             this.panel_upperbar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Button_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Button_close)).EndInit();
+            this.main_panel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -442,6 +456,7 @@
         private Bunifu.Framework.UI.BunifuImageButton Button_close;
         public System.Windows.Forms.Panel main_panel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private UserControlVolumeControl userControlVolumeControl1;
     }
 }
 

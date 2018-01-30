@@ -152,6 +152,46 @@ namespace YouStream.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Low_Volume {
+            get {
+                object obj = ResourceManager.GetObject("Low_Volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Maximum_Volume {
+            get {
+                object obj = ResourceManager.GetObject("Maximum_Volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Medium_Volume {
+            get {
+                object obj = ResourceManager.GetObject("Medium_Volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mute_Volume {
+            get {
+                object obj = ResourceManager.GetObject("Mute_Volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap My_Music_Icon {
             get {
                 object obj = ResourceManager.GetObject("My_Music_Icon", resourceCulture);
@@ -166,6 +206,16 @@ namespace YouStream.Properties {
             get {
                 object obj = ResourceManager.GetObject("NAudio", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap No_Volume {
+            get {
+                object obj = ResourceManager.GetObject("No_Volume", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -225,16 +275,6 @@ namespace YouStream.Properties {
         internal static string String {
             get {
                 return ResourceManager.GetString("String", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Transparent_Black {
-            get {
-                object obj = ResourceManager.GetObject("Transparent_Black", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
