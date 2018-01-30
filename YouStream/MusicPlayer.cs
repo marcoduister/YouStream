@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using NAudio.Wave;
 
 namespace YouStream
@@ -13,10 +14,11 @@ namespace YouStream
         public WaveStream WavStream { get; set; }
         public BlockAlignReductionStream BarStream { get; set; }
         public WaveOut waveOut { get; set; }
-        public string curTimeString { get; set; }
-        public int curTimeSeconds { get; set; }
+        public string CurTimeString { get; set; }
+        public int CurTimeSeconds { get; set; }
         public string MaxTimeString { get; set; }
         public int MaxTimeSeconds { get; set; }
+        public int ByteSecond { get; set; }
 
         public MusicPlayer()
         {
@@ -36,25 +38,35 @@ namespace YouStream
             MaxTimeString = WavStream.TotalTime.ToString("mm\\:ss");
             MaxTimeSeconds = (int)WavStream.TotalTime.TotalSeconds;
 
+            long fileLenght = Ms.Length;
+            int fileLenght2 = Convert.ToInt32(fileLenght);
+            ByteSecond = fileLenght2 / MaxTimeSeconds;
+            
             Rdr.Position = 0;
             waveOut.Play();
             MusicState = musicstate.Playing;
         }
 
-        public void FastBackward()
+        public void SetPositionBar()
         {
 
         }
 
-        public void FastForward()
+        public void TenSecondsBackward()
         {
+            int oldBytePosition = Convert.ToInt32(Rdr.Position);
+            Rdr.Position = (oldBytePosition - (83 * ByteSecond));
+        }
 
+        public void TenSecondsForward()
+        {
+            WavStream.Skip(10);
         }
 
         public void GetPosition()
         {
-            curTimeString = WavStream.CurrentTime.ToString("mm\\:ss");
-            curTimeSeconds = (int)WavStream.CurrentTime.TotalSeconds;
+            CurTimeString = WavStream.CurrentTime.ToString("mm\\:ss");
+            CurTimeSeconds = (int)WavStream.CurrentTime.TotalSeconds;
         }
 
         public void Pause()

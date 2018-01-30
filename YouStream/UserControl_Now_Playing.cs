@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Windows.Forms;
 
@@ -35,19 +36,26 @@ namespace YouStream
 
         private void TimerSetPosition_Tick(object sender, EventArgs e)
         {
-            Form1.Mp.GetPosition();
-            Label_CurrentTime.Text = Form1.Mp.curTimeString;
-            ProgressBar_MusicTIme.Value = Form1.Mp.curTimeSeconds;
+            try
+            {
+                Form1.Mp.GetPosition();
+                Label_CurrentTime.Text = Form1.Mp.CurTimeString;
+                ProgressBar_MusicTIme.Value = Form1.Mp.CurTimeSeconds;
+            }
+            catch
+            {
+                // ignored
+            }
         }
 
         private void Button_FastForward_Click(object sender, EventArgs e)
         {
-            Form1.Mp.WavStream.Skip(10);
+            Form1.Mp.TenSecondsForward();
         }
 
         private void Button_FastBackward_Click(object sender, EventArgs e)
         {
-            Form1.Mp.Rdr.Position = 0;
+            Form1.Mp.TenSecondsBackward();
         }
     }
 }
