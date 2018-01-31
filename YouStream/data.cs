@@ -10,7 +10,7 @@ namespace YouStream
 {
     static class data
     {
-        private static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=D:\\GitHub\\YouStream\\YouStream\\Database1.mdf;Integrated Security=True");
+        private static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\marco\\Source\\Repos\\YouStream\\YouStream\\Database1.mdf;Integrated Security=True");
 
         public static void Dataset()
         {
@@ -66,10 +66,11 @@ namespace YouStream
             //SqlCommand newplaylist = new SqlCommand(, conn);
 
 
-            myReader = playlistopvragen.ExecuteReader();
+            
 
             if (playlistopvragenbool)
             {
+                myReader = playlistopvragen.ExecuteReader();
                 while (myReader.Read())
                 {
                     playlist_Id_list.Add(Convert.ToInt32(myReader["playlist_Id"]));

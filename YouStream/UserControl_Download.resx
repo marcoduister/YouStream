@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Textbox_search2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Textbox_search.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAwAAAAB/CAYAAABYHaUHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAUnSURBVHhe7djLbhtZEERB/T/mnz2wXQW36RQfECW2EhHA
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAUnSURBVHhe7djLbhtZEERB/T/mnz2wXQW36RQfECW2EhHA
         Wc1tysuseXuGH/+9/ZAkSZL0uc38fo30D5IkSZL0Nc0s/3zpj0uSJEl6TTPTny/9MUmSJEnnaGb7c6Q/
         IEmSJOlczXz/mPTDkiRJks7ZzPjHpR+TJEmS9D2aWX+/9COPNj8FAAA8IG3rR5ufuk/6gVvNpwAAwCdI
         G/xW8+l16cNrzWcAAMAXSJv8WvNZlj641nwGAAB8sbTP32s++Vd6nJrnAADAC6Wtnprnf0sPU/McAAA4
@@ -146,10 +146,10 @@
         45IkSZK+ppnlr5H+QZIkSZKe28zvD3h7+x/ndiYg4gdokQAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="Textbox_search2.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="Textbox_search.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMFSURBVHhe7ZDRautADAXz/9x/bqGMQPjOpkm7dqRUA/Pk
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMFSURBVHhe7ZDRautADAXz/9x/bqGMQPjOpkm7dqRUA/Pk
         o/WRbsMwDMMwDMMwDMPwNB//bh+/kWeGZ7BD7pDnhxV2tDPkd0NgR7pCfv93saO8Qur8LewQr5Ra748t
         X0lqvie28KPyxMPYG4/KE++FLfqdjP4ae/s7GX0PbMF7MrYd+9c9GeuNLbaSkdOxf69kpC+2lEn8MqyD
         SbwntpBJ/HKsi0m8F7aISfxlWCeTeB9siaNEX451O0q0B7bAUaJlsI5HidbHymeJlcO6ZonVxopniZXF

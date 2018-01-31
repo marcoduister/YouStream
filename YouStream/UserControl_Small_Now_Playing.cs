@@ -33,7 +33,9 @@ namespace YouStream
 
         private void ProgressBar_Volume_MouseClick(object sender, MouseEventArgs e)
         {
-            
+            int mousePosition = e.X;
+            ProgressBar_Volume.Value = mousePosition;
+            _device.AudioEndpointVolume.MasterVolumeLevelScalar = (ProgressBar_Volume.Value / 100.0f);
         }
 
         private void Timer_Tick(object sender, System.EventArgs e)
@@ -81,18 +83,6 @@ namespace YouStream
         private void Button_FastBackward_Click(object sender, System.EventArgs e)
         {
             Form1.Mp.TenSecondsBackward();
-        }
-
-        private void ProgressBar_Volume_Click(object sender, System.EventArgs e)
-        {
-            
-        }
-
-        private void ProgressBar_Volume_MouseDown(object sender, MouseEventArgs e)
-        {
-            int mousePosition = e.X;
-            ProgressBar_Volume.Value = mousePosition;
-            _device.AudioEndpointVolume.MasterVolumeLevelScalar = (ProgressBar_Volume.Value / 100.0f);
         }
     }
 }

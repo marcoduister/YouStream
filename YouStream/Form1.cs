@@ -124,6 +124,7 @@ namespace YouStream
         }
 
         private int playlist_height = 0;
+        private int count_item = 0;
         private void Button_panel_playlist_refresh_Click(object sender, EventArgs e)
         {
             #region clear variable
@@ -133,22 +134,27 @@ namespace YouStream
             data.playlist_Name_list.Clear();
             data.playlist_Id_list.Clear();
             data.playlist_Description_list.Clear();
+            count_item = 0;
 
             #endregion
 
             #region start
             data.playlistopvragenbool = true;
             data.Dataget();
-            
+
             #endregion
 
             foreach( string item in data.playlist_Name_list)
             {
-                playlist_litle playlist = new playlist_litle();
-                playlist.label_playlist.Text = item;
-                panel_playlist.Controls.Add(playlist);
-                playlist.Location = new Point(0, playlist_height);
+                playlist_litle playlisttemp = new playlist_litle();
+                playlisttemp.label_playlist.Text = item;
+                playlisttemp.Playlist_name = item;
+                playlisttemp.Playlist_id = data.playlist_Id_list[count_item];
+                playlisttemp.Playlist_Description = data.playlist_Description_list[count_item];
+                panel_playlist.Controls.Add(playlisttemp);
+                playlisttemp.Location = new Point(0, playlist_height);
                 playlist_height += 46;
+                count_item += 1;
             }
         }
 

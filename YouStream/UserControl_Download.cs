@@ -20,15 +20,16 @@ namespace YouStream
             InitializeComponent();
 
         }
-
-        private void SearchMusic()
+        
+        private void button_search_Click(object sender, EventArgs e)
         {
+
             panel_video.Controls.Clear();
             VideoSearch items = new VideoSearch();
             List<Download> list = new List<Download>();
             int aantal = list.Count;
             int height = 0;
-            foreach (var item in items.SearchQuery(Textbox_search.Text, 1))
+            foreach (var item in items.SearchQuery(Textbox_search.text, 1))
             {
                 
 
@@ -52,19 +53,6 @@ namespace YouStream
                 video_panel.Thumbnail.Size = new Size(246, 138);
                 video_panel.Location = new Point(0, height);
                 height += 152;
-            }
-        }
-        
-        private void button_search_Click(object sender, EventArgs e)
-        {
-            SearchMusic();
-        }
-
-        private void Textbox_search_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char) Keys.Enter)
-            {
-                SearchMusic();
             }
         }
     }

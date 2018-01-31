@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button_refresh_playlist.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button_playlist_open.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAA61JREFUeF7t
         2s1uHEUAhVGvCBK8FzwqSxAIiR0/D8USqtzHEuLaQ814Ym6P6kijRPm6OnfKWeZp27Zt27Zt27ZtewB/
@@ -139,7 +139,7 @@
         v7H12/F5+SFcvPztMxmXPn8I3+3L37Zt27Zt27YyT09/A9CwOBiiWDkUAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="button_play.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="button_playlist_play.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGgAAABoCAYAAAAdHLWhAAAABGdBTUEAALGPC/xhBQAAA49JREFUeF7t
         nblrVFEUxk+nhaKFa+GK+4a7rUttZ2tnZSMIYptGmcyqgoWNYMp0olWmtbLz3xCEGI2K2/W73HNxfDhk
