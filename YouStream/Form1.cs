@@ -24,6 +24,8 @@ namespace YouStream
             foreach (string item in favlist)
             {   Favorites.favoritelist.Add(item);   }
             Button_panel_playlist_refresh_Click(null,null);
+            UserControl_my_Music change = new UserControl_my_Music();
+            Panel(change);
         }
 
         #region menu

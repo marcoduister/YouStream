@@ -57,7 +57,9 @@
             this.ProgressBar_Volume.TabIndex = 10;
             this.ProgressBar_Volume.TabStop = false;
             this.ProgressBar_Volume.Value = 0;
+            this.ProgressBar_Volume.Click += new System.EventHandler(this.ProgressBar_Volume_Click);
             this.ProgressBar_Volume.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ProgressBar_Volume_MouseClick);
+            this.ProgressBar_Volume.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProgressBar_Volume_MouseDown);
             // 
             // PictureBox_Volume
             // 

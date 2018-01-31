@@ -61,7 +61,7 @@ namespace YouStream
             int height = 1;
             foreach (string result in searchresult)
             {
-                if (result.Contains(Textbox_search.text.ToUpper()) || result.Contains(Textbox_search.text.ToLower()))
+                if (result.Contains(Textbox_search.Text.ToUpper()) || result.Contains(Textbox_search.Text.ToLower()))
                 {
                     UserControl_my_music_result music = new UserControl_my_music_result();
                     music.path_video = loc + result;
@@ -71,6 +71,14 @@ namespace YouStream
                     music.Location = new Point(0, height);
                     height += 84;
                 }
+            }
+        }
+
+        private void Textbox_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                Lookup();
             }
         }
     }
