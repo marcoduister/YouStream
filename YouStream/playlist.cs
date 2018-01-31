@@ -60,7 +60,7 @@ namespace YouStream
         {
             data.Playlist_name = textbox_playlistName_playlist.Text;
             data.Playlist_Description = textbox_description_playlist.Text;
-            data.Datatransport();
+            data.Dataset();
             buttonactive.Enabled = true;
             //Thread.Sleep(1000);
             new Thread(new ThreadStart(CloseThread)).Start();

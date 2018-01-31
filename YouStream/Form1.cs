@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -22,6 +23,7 @@ namespace YouStream
             Favorites.favoritelist.Clear();
             foreach (string item in favlist)
             {   Favorites.favoritelist.Add(item);   }
+            Button_panel_playlist_refresh_Click(null,null);
         }
 
         #region menu
@@ -32,11 +34,6 @@ namespace YouStream
             Panel(change);
         }
 
-        private void Button_RecentlyPlayed_Click(object sender, EventArgs e)
-        {
-            UserControl_Now_Playing change = new UserControl_Now_Playing();
-            Panel(change);
-        }
         private void Button_download_Click(object sender, EventArgs e)
         {
             UserControl_Download change = new UserControl_Download();
@@ -112,8 +109,11 @@ namespace YouStream
             Properties.Settings.Default.fav_list = Temp;
             Properties.Settings.Default.Save();
         }
-        
 
+        #region playlist
+
+        
+        
         private void Button_AddPlaylist_Click(object sender, EventArgs e)
         {
             Button_AddPlaylist.Enabled = false;
@@ -121,11 +121,35 @@ namespace YouStream
             playlistcreate.Show();
         }
 
-        
+        private int playlist_height = 0;
         private void Button_panel_playlist_refresh_Click(object sender, EventArgs e)
         {
+            #region clear variable
+            playlist_height = 0;
+            panel_playlist.Controls.Clear();
             panel_playlist.Refresh();
+            data.playlist_Name_list.Clear();
+            data.playlist_Id_list.Clear();
+            data.playlist_Description_list.Clear();
+
+            #endregion
+
+            #region start
+            data.playlistopvragenbool = true;
+            data.Dataget();
             
+            #endregion
+
+            foreach( string item in data.playlist_Name_list)
+            {
+                playlist_litle playlist = new playlist_litle();
+                playlist.label_playlist.Text = item;
+                panel_playlist.Controls.Add(playlist);
+                playlist.Location = new Point(0, playlist_height);
+                playlist_height += 46;
+            }
         }
+
+        #endregion
     }
 }

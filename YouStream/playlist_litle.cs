@@ -12,6 +12,8 @@ namespace YouStream
 {
     public partial class playlist_litle : UserControl
     {
+
+        public static string  Playlist_name{ get; set; }
         public playlist_litle()
         {
             InitializeComponent();

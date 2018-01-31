@@ -236,7 +236,7 @@
             this.textbox_playlistName_playlist.BorderThickness = 3;
             this.textbox_playlistName_playlist.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textbox_playlistName_playlist.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textbox_playlistName_playlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_playlistName_playlist.ForeColor = System.Drawing.Color.White;
             this.textbox_playlistName_playlist.isPassword = false;
             this.textbox_playlistName_playlist.Location = new System.Drawing.Point(4, 27);
             this.textbox_playlistName_playlist.Margin = new System.Windows.Forms.Padding(4);
@@ -253,7 +253,7 @@
             this.textbox_description_playlist.BorderThickness = 3;
             this.textbox_description_playlist.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.textbox_description_playlist.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.textbox_description_playlist.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textbox_description_playlist.ForeColor = System.Drawing.Color.White;
             this.textbox_description_playlist.isPassword = false;
             this.textbox_description_playlist.Location = new System.Drawing.Point(4, 103);
             this.textbox_description_playlist.Margin = new System.Windows.Forms.Padding(4);
