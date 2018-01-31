@@ -128,5 +128,19 @@ namespace YouStream
                 MusicControlOn = false;
             }
         }
+
+        private void Button_AddPlaylist_Click(object sender, EventArgs e)
+        {
+            Button_AddPlaylist.Enabled = false;
+            playlist playlistcreate = new playlist(Button_AddPlaylist);
+            playlistcreate.Show();
+        }
+
+        
+        private void Button_panel_playlist_refresh_Click(object sender, EventArgs e)
+        {
+            panel_playlist.Refresh();
+            
+        }
     }
 }
