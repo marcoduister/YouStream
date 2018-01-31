@@ -7,6 +7,8 @@ namespace YouStream
 {
     public partial class UserControlVolumeControl : UserControl
     {
+        public bool Mute { get; set;}
+
         private readonly MMDevice _device;
 
         private const int MuteVolume = 524288;
@@ -42,27 +44,44 @@ namespace YouStream
 
         private void TimerButtonImage_Tick(object sender, EventArgs e)
         {
-            if (Slider_Volume.Value < 1)
+            if (Mute == false)
             {
-                ButtonVolumeMute.Image = Properties.Resources.No_Volume;
+                ButtonVolumeMute.Image = Properties.Resources.Mute_Volume;
             }
-            else if (Slider_Volume.Value < 34)
+            else if (Mute == true)
             {
-                ButtonVolumeMute.Image = Properties.Resources.Low_Volume;
-            }
-            else if (Slider_Volume.Value < 67)
-            {
-                ButtonVolumeMute.Image = Properties.Resources.Medium_Volume;
-            }
-            else if (Slider_Volume.Value > 67)
-            {
-                ButtonVolumeMute.Image = Properties.Resources.Maximum_Volume;
+                if (Slider_Volume.Value < 1)
+                {
+                    ButtonVolumeMute.Image = Properties.Resources.No_Volume;
+                }
+                else if (Slider_Volume.Value < 34)
+                {
+                    ButtonVolumeMute.Image = Properties.Resources.Low_Volume;
+                }
+                else if (Slider_Volume.Value < 67)
+                {
+                    ButtonVolumeMute.Image = Properties.Resources.Medium_Volume;
+                }
+                else if (Slider_Volume.Value > 67)
+                {
+                    ButtonVolumeMute.Image = Properties.Resources.Maximum_Volume;
+                }
             }
         }
 
         private void ButtonVolumeMute_Click(object sender, EventArgs e)
         {
-            SendMessageW(Handle, WmAppcommand, Handle, (IntPtr)MuteVolume);
+            if (Mute == false)
+            {
+                SendMessageW(Handle, WmAppcommand, Handle, (IntPtr) MuteVolume);
+                ButtonVolumeMute.Image = Properties.Resources.Mute_Volume;
+                Mute = true;
+            }
+            else if (Mute == true)
+            {
+                SendMessageW(Handle, WmAppcommand, Handle, (IntPtr) MuteVolume);
+                Mute = false;
+            }
         }
 
         private void Slider_Volume_ValueChanged(object sender, EventArgs e)

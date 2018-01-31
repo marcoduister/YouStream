@@ -118,11 +118,13 @@ namespace YouStream
             if (MusicControlOn == false)
             {
                 userControlVolumeControl1.Visible = true;
+                userControlVolumeControl1.BringToFront();
                 MusicControlOn = true;
             }
             else if (MusicControlOn == true)
             {
                 userControlVolumeControl1.Visible = false;
+                userControlVolumeControl1.SendToBack();
                 MusicControlOn = false;
             }
         }
