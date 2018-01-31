@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +51,7 @@
       <HintPath>Properties\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="CoreAudioApi">
-      <HintPath>D:\marco\Downloads\CoreAudioApi.dll</HintPath>
+      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\CoreAudioApi.dll</HintPath>
     </Reference>
     <Reference Include="libvideo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -94,12 +109,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControlVolumeControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControlVolumeControl.Designer.cs">
-      <DependentUpon>UserControlVolumeControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControl_Download.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +145,12 @@
     <Compile Include="UserControl_Now_Playing.Designer.cs">
       <DependentUpon>UserControl_Now_Playing.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_Small_Now_Playing.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_Small_Now_Playing.Designer.cs">
+      <DependentUpon>UserControl_Small_Now_Playing.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_videosearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,9 +176,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControlVolumeControl.resx">
-      <DependentUpon>UserControlVolumeControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Download.resx">
       <DependentUpon>UserControl_Download.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +193,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Now_Playing.resx">
       <DependentUpon>UserControl_Now_Playing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_Small_Now_Playing.resx">
+      <DependentUpon>UserControl_Small_Now_Playing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_videosearch.resx">
       <DependentUpon>UserControl_videosearch.cs</DependentUpon>
@@ -254,6 +269,13 @@
     <None Include="Resources\AForge.Video.dll" />
     <None Include="Resources\Fast Forward.png" />
     <None Include="Resources\FastBackward.png" />
+    <Content Include="Database1.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database1_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Resources\Favorites-off.png" />
     <Content Include="Resources\Favorites-on.png" />
     <None Include="Resources\icons8_Star_Filled_96px.png" />
@@ -262,6 +284,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="System\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -112,22 +112,7 @@ namespace YouStream
             Properties.Settings.Default.fav_list = Temp;
             Properties.Settings.Default.Save();
         }
-
-        private void Button_Volume_Click(object sender, EventArgs e)
-        {
-            if (MusicControlOn == false)
-            {
-                userControlVolumeControl1.Visible = true;
-                userControlVolumeControl1.BringToFront();
-                MusicControlOn = true;
-            }
-            else if (MusicControlOn == true)
-            {
-                userControlVolumeControl1.Visible = false;
-                userControlVolumeControl1.SendToBack();
-                MusicControlOn = false;
-            }
-        }
+        
 
         private void Button_AddPlaylist_Click(object sender, EventArgs e)
         {
