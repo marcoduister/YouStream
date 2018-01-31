@@ -36,7 +36,7 @@
       <HintPath>Properties\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="CoreAudioApi">
-      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\CoreAudioApi.dll</HintPath>
+      <HintPath>D:\marco\Downloads\CoreAudioApi.dll</HintPath>
     </Reference>
     <Reference Include="libvideo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -70,6 +70,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="data.cs" />
     <Compile Include="download.cs" />
     <Compile Include="Favorites.cs" />
     <Compile Include="Form1.cs">
@@ -79,6 +80,18 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="MusicPlayer.cs" />
+    <Compile Include="playlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="playlist.Designer.cs">
+      <DependentUpon>playlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="playlist_litle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="playlist_litle.Designer.cs">
+      <DependentUpon>playlist_litle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControlVolumeControl.cs">
@@ -131,6 +144,12 @@
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="playlist.resx">
+      <DependentUpon>playlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="playlist_litle.resx">
+      <DependentUpon>playlist_litle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
