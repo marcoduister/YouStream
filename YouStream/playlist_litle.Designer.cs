@@ -51,6 +51,7 @@
             this.button_playlist_open.TabIndex = 8;
             this.button_playlist_open.TabStop = false;
             this.button_playlist_open.Zoom = 10;
+            this.button_playlist_open.Click += new System.EventHandler(this.button_playlist_open_Click);
             // 
             // label_playlist
             // 

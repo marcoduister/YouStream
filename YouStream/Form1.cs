@@ -146,7 +146,7 @@ namespace YouStream
 
             foreach( string item in data.playlist_Name_list)
             {
-                playlist_litle playlisttemp = new playlist_litle();
+                playlist_litle playlisttemp = new playlist_litle(main_panel);
                 playlisttemp.label_playlist.Text = item;
                 playlisttemp.Playlist_name = item;
                 playlisttemp.Playlist_id = data.playlist_Id_list[count_item];
@@ -159,5 +159,6 @@ namespace YouStream
         }
 
         #endregion
+
     }
 }
