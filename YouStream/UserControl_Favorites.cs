@@ -50,7 +50,7 @@ namespace YouStream
             {
                 if (result != "")
                 {
-                    if (result.Contains(Textbox_search.text.ToUpper()) || result.Contains(Textbox_search.text.ToLower()))
+                    if (result.Contains(Textbox_search.Text.ToUpper()) || result.Contains(Textbox_search.Text.ToLower()))
                     {
                         UserControl_my_music_result music = new UserControl_my_music_result();
                         int count = UserControl_my_Music.loc.Count();
@@ -62,6 +62,14 @@ namespace YouStream
                         height += 84;
                     }
                 }
+            }
+        }
+
+        private void Textbox_search_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char) Keys.Enter)
+            {
+                Lookup();
             }
         }
     }
