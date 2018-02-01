@@ -36,6 +36,7 @@ namespace YouStream
         #region bool dataget
 
         public static bool playlistopvragenbool;
+        public static bool songopvragenbool;
 
 
         #endregion
@@ -49,9 +50,16 @@ namespace YouStream
 
         #endregion
 
+        #region song_list
+        public static List<int> song_Id_list = new List<int>();
+        public static List<string> song_Name_list = new List<string>();
+        public static List<string> song_path_list = new List<string>();
 
         #endregion
 
+        #endregion
+
+        
         public static void Dataget()
         {
             try
@@ -62,11 +70,11 @@ namespace YouStream
             }
             SqlDataReader myReader = null;
             SqlCommand playlistopvragen = new SqlCommand("SELECT * FROM playlist", conn);
-            SqlCommand add_songtoplaylist = new SqlCommand("INSERT INTO playlist_song (song_name, song_path, playlist_Id) VALUES(value1, value2, value3);", conn);
+            SqlCommand playlist_songslist = new SqlCommand("SELECT * FROM playlist_song WHERE playlist_id = '"+Playlist_idget+"' ORDER BY song_name ASC; ", conn);
             //SqlCommand newplaylist = new SqlCommand(, conn);
 
 
-            
+
 
             if (playlistopvragenbool)
             {
@@ -79,11 +87,25 @@ namespace YouStream
                 }
                 playlistopvragenbool = false;
             }
+            if (songopvragenbool)
+            {
+                myReader = playlist_songslist.ExecuteReader();
+                while (myReader.Read())
+                {
+                    song_Id_list.Add(Convert.ToInt32(myReader["playlist_song_Id"]));
+                    song_Name_list.Add(myReader["song_name"].ToString());
+                    song_path_list.Add(myReader["song_path"].ToString());
+                }
+                songopvragenbool = false;
+            }
 
-            
+
 
             conn.Close();
         }
+
+
+        public static int Playlist_idget { get; set; }
 
         #region variable playlist maken
         public static string Playlist_name

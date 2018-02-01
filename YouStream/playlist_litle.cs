@@ -24,12 +24,15 @@ namespace YouStream
             InitializeComponent();
         }
 
-        private void button_playlist_open_Click(object sender, EventArgs e)
+        private void Button_playlist_open_Click(object sender, EventArgs e)
         {
             main.Controls.Clear();
             UserControl_Playlists change = new UserControl_Playlists();
+            change.Playlist_id = Playlist_id;
             main.Controls.Add(change);
-
+            
+            change.label_playlist_name.Text = Playlist_name;
+            change.label_Description.Text = Playlist_Description;
             main.Show();
 
         }
