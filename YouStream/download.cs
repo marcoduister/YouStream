@@ -9,7 +9,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using VideoLibrary;
 
 
@@ -36,21 +35,20 @@ namespace YouStream
             var video =  youTube.GetVideo(Link); // gets a Video object with info about the video
             string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             string loc = path +"\\youstream\\"+ video.FullName.ToLower();
+            
+            File.WriteAllBytes(loc, video.GetBytes());
 
-            try
+            var inputFile = new MediaFile { Filename = loc };
+            var outputFile = new MediaFile { Filename = loc.Remove(loc.Length - 14)+".mp3" };
+
+            using (var engine = new Engine())
             {
-                File.WriteAllBytes(loc, video.GetBytes());
-
-                var inputFile = new MediaFile { Filename = loc };
-                var outputFile = new MediaFile { Filename = loc.Remove(loc.Length - 14)+".mp3" };
-
-                using (var engine = new Engine())
-                {
-                    engine.GetMetadata(inputFile);
+                engine.GetMetadata(inputFile);
 
                 engine.Convert(inputFile, outputFile);
             }
             System.IO.File.Delete(loc);
+
             download.Abort();
         }
 

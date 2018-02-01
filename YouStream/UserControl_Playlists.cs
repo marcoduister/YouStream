@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace YouStream
 {
     public partial class UserControl_Playlists : UserControl
     {
         public int Playlist_id { get; set; }
+        public string Path { get; private set; }
+
         public UserControl_Playlists()
         {
             InitializeComponent();
@@ -60,12 +63,41 @@ namespace YouStream
             }
         }
 
-        
+        public static int count;
+        public static int filename;
+        public static string fileName;
         private void Button_add_song_Click(object sender, EventArgs e)
         {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
+            
+            string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+            string loc = path + "\\youstream\\";
 
- 
+            openFileDialog1.InitialDirectory = loc;
+            openFileDialog1.Filter = "Music (.mp3)|*.mp3";
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fullPath = openFileDialog1.FileName;
+                fileName = openFileDialog1.SafeFileName;
+                Path = fullPath;
+                count = Path.Count();
+                filename = fileName.Count();
+            }
+
+            //string name =
+            //music.path_video = video;
+            //music.label_name_song.Text = name.Remove(name.Length - 4);
+
+            data.Insert_name_song = fileName.Remove(fileName.Length - 4);
+            data.Insert_path_song = Path;
+            data.Insert_playlist_id = Playlist_id;
+
+            data.insertsong = true;
+            data.Dataset();
+            Fill();
+
         }
     }
 }

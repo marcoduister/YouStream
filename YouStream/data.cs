@@ -12,6 +12,16 @@ namespace YouStream
     {
         private static SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\marco\\Source\\Repos\\YouStream\\YouStream\\Database1.mdf;Integrated Security=True");
 
+
+
+        #region insert music playlist
+
+        public static string Insert_path_song { get; set; }
+        public static string Insert_name_song { get; set; }
+        public  static int Insert_playlist_id { get; set; }
+
+        #endregion
+
         public static void Dataset()
         {
             try
@@ -22,17 +32,33 @@ namespace YouStream
             }
 
             SqlCommand newplaylist = new SqlCommand("INSERT INTO playlist (playlist_Name, playlist_Description"/*, playlist_image*/+") VALUES('"+ Playlist_name + "','"+ Playlist_Description + /*, value3*/"');", conn);
-            SqlCommand add_songtoplaylist = new SqlCommand("INSERT INTO playlist_song (song_name, song_path, playlist_Id) VALUES(value1, value2, value3);", conn);
-            //SqlCommand newplaylist = new SqlCommand(, conn);
+            SqlCommand add_songtoplaylist = new SqlCommand("INSERT INTO playlist_song (song_name,song_path,playlist_Id)VALUES('"+Insert_name_song+"','"+Insert_path_song+"','"+Insert_playlist_id+"');", conn);
             
 
             SqlDataReader myReader = null;
 
-            myReader = newplaylist.ExecuteReader();
+            if (insertplaylist)
+            {
+                myReader = newplaylist.ExecuteReader();
+                insertplaylist = false;
+            }
+            if(insertsong)
+            {
+                myReader = add_songtoplaylist.ExecuteReader();
+                insertsong = false;
+            }
+            
 
             conn.Close();
         }
 
+        #region bool dataget
+
+        public static bool insertplaylist;
+        public static bool insertsong;
+
+
+        #endregion
         #region bool dataget
 
         public static bool playlistopvragenbool;
@@ -120,5 +146,6 @@ namespace YouStream
 
 
         #endregion
+
     }
 }
