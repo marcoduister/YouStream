@@ -51,7 +51,7 @@
       <HintPath>Properties\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="CoreAudioApi">
-      <HintPath>D:\marco\Downloads\CoreAudioApi.dll</HintPath>
+      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\CoreAudioApi.dll</HintPath>
     </Reference>
     <Reference Include="libvideo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

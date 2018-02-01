@@ -34,7 +34,7 @@ namespace YouStream
 
                 Download videosearch = new Download();
                 videosearch.Title = item.Title;
-                videosearch.author = item.Author;
+                videosearch.Author = item.Author;
                 videosearch.Url = item.Url;
                 byte[] imagebytes = new WebClient().DownloadData(item.Thumbnail);
                 using (MemoryStream MS = new MemoryStream(imagebytes))
@@ -46,7 +46,7 @@ namespace YouStream
 
                 panel_video.Controls.Add(video_panel);
                 video_panel.label_Title.Text = videosearch.Title;
-                video_panel.label_Author.Text = videosearch.author;
+                video_panel.label_Author.Text = videosearch.Author;
                 video_panel.Thumbnail.Image = videosearch.Thumbnail;
                 video_panel.Url = videosearch.Url;
                 video_panel.Thumbnail.Size = new Size(246, 138);
