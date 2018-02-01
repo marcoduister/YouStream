@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 using System.IO;
 using VideoLibrary;
+using System.Threading;
 
 namespace YouStream
 {
@@ -27,7 +28,8 @@ namespace YouStream
 
         private void button_download_Click(object sender, EventArgs e)
         {
-            Download.SaveVideoToDisk(Url);
+
+            Download.Startdow(Url);
         }
 
     }

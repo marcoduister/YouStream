@@ -11,6 +11,7 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,7 +24,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -51,7 +51,7 @@
       <HintPath>Properties\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="CoreAudioApi">
-      <HintPath>C:\Users\Kevin\Documents\Visual Studio 2017\ExtraDLL\CoreAudioApi.dll</HintPath>
+      <HintPath>D:\marco\Downloads\CoreAudioApi.dll</HintPath>
     </Reference>
     <Reference Include="libvideo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -133,6 +133,12 @@
     <Compile Include="UserControl_my_music_result.Designer.cs">
       <DependentUpon>UserControl_my_music_result.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl_playlistresults.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl_playlistresults.Designer.cs">
+      <DependentUpon>UserControl_playlistresults.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl_Playlists.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_my_music_result.resx">
       <DependentUpon>UserControl_my_music_result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl_playlistresults.resx">
+      <DependentUpon>UserControl_playlistresults.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControl_Playlists.resx">
       <DependentUpon>UserControl_Playlists.cs</DependentUpon>

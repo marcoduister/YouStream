@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using VideoLibrary;
@@ -20,13 +21,19 @@ namespace YouStream
         public string author { get; set; }
         public string Url { get; set; }
         public Image Thumbnail { get; set; }
-
-
-        public static void SaveVideoToDisk(string link)
+        public static string Link { get; set; }
+        private static Thread download = new Thread(SaveVideoToDisk);
+        public static void Startdow(string link)
         {
+            Link = link;
+            
+            download.Start();
+        }
 
+        public static void SaveVideoToDisk()
+        {
             var youTube = YouTube.Default; // starting point for YouTube actions
-            var video =  youTube.GetVideo(link); // gets a Video object with info about the video
+            var video =  youTube.GetVideo(Link); // gets a Video object with info about the video
             string path = System.Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
             string loc = path +"\\youstream\\"+ video.FullName.ToLower();
 
@@ -41,15 +48,12 @@ namespace YouStream
                 {
                     engine.GetMetadata(inputFile);
 
-                    engine.Convert(inputFile, outputFile);
-                }
-                System.IO.File.Delete(loc);
+                engine.Convert(inputFile, outputFile);
             }
-            catch
-            {
-                MessageBox.Show(@"You can't Download this video, This is a copyrighted video" + "\r\n" + @"We are trying to fix this problem", @"Can't download video");
-            }
+            System.IO.File.Delete(loc);
+            download.Abort();
         }
+
     }
 }
 
